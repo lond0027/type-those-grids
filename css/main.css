@@ -1,38 +1,53 @@
 html {
-  box-sizing: border-box;
   background-color: #fff;
-  font-family: "Merriweather",sans-serif;
+  font-family: Merriweather, serif;
   line-height: 1.5;
   box-sizing: border-box;
-
+  font-weight: normal;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
+img {
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: .75rem;
+  grid-template-areas:
+    "banner banner banner"
+    "image1 image2 image3";
+}
+
 h1 {
-  font-family: "Merriweather";
-  font-style:italic;
+  font-family: Merriweather;
+  font-style: italic;
   text-transform: inherit;
-  margin: 1rem;
-  font-size: 1.8;
+  margin: 1.5rem;
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
-h2{
-  font-family: "Merriweather";
-  font-style:italic;
-  text-transform: none;
-  margin:1rem;
-  font-size: 1.8rem
+h2 {
+  font-family: Merriweather;
+  font-style: italic;
+  text-transform: inherit;
+  margin: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: normal;
 }
 
-.intro {
-  color:#fff;
-  grid-column: 1 / 2;
-  align-self: end;
-  z-index: 1;
+h3 {
+  font-family: Merriweather;
+  font-style: italic;
+  text-transform: inherit;
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 div {
@@ -43,31 +58,60 @@ div {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-img {
+.maerten {
+  z-index: 1;
+  margin: 1;
+  grid-column: 1 / -1;
+  grid-row: 1;
   width: 100%;
 }
-figcaption{
+
+.intro {
+  color: #fff;
+  grid-column: 1 / 4;
+  align-self: end;
+  z-index: 1;
+  grid-row: 1;
+}
+
+.come {
+  color: #fff;
+  grid-column: 1 / 4;
+  align-self: end;
+  z-index: 1;
+  grid-row: 1;
+}
+
+figcaption {
   padding: .2rem 1.2rem;
 }
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: .75rem;
-  grid-template-areas:
-  "banner banner banner"
-  "image1 image2 image3"
-}
 
-main > img {
-  grid-area: banner;
-}
-
-figure{
+figure {
   margin: 0;
 }
 
 .banner-text {
   grid-area: banner;
   align-self: end;
-  padding:1.5rem 1rem;
+  padding: 1.5rem 1rem;
+}
+
+main > img {
+  grid-area: sidebar;
+}
+
+dt {
+  font-family: Merriweather;
+  font-style: italic;
+  text-transform: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+dd{
+  font-family: Merriweather;
+  font-style:normal;
+  text-transform: inherit;
+  font-size: 1rem;
+  font-weight: normal;
 }
